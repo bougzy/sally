@@ -1,0 +1,32 @@
+/* TradingViewWidget.css */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .tradingview-widget-container {
+    display: inline-flex; /* Updated display property */
+    animation: marquee 20s linear infinite; /* Adjust the duration as needed */
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .tradingview-widget-container__widget {
+    flex-shrink: 0; /* Prevent the widget from shrinking */
+  }
+  
+  .tradingview-widget-copyright {
+    margin-left: 10px; /* Add margin for better spacing */
+  }
+  
+  .blue-text {
+    color: blue; /* Change text color to blue */
+  }
+  
