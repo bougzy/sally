@@ -25,16 +25,18 @@ const My = () => {
         return () => clearInterval(interval);
     }, [depositAmount]);
 
-    const handleDeposit = (amount) => {
-        if (!isNaN(amount) && amount > 0) {
-            const newAmount = depositAmount + amount;
-            setDepositAmount(newAmount);
-            // Update the timestamp in localStorage
-            localStorage.setItem('timestamp', Date.now());
-            // Store the new amount in localStorage
-            localStorage.setItem('depositAmount', newAmount);
-        }
-    };
+    const handleDeposit = () => {
+    const inputElement = document.getElementById('depositAmount');
+    const inputValue = inputElement ? parseFloat(inputElement.value) : 0;
+    if (!isNaN(inputValue) && inputValue > 0) {
+        const newAmount = depositAmount + inputValue;
+        setDepositAmount(newAmount);
+        // Update the timestamp in localStorage
+        localStorage.setItem('timestamp', Date.now());
+        // Store the new amount in localStorage
+        localStorage.setItem('depositAmount', newAmount);
+    }
+};
 
     return (
         <Container>
