@@ -16,7 +16,7 @@ const My = () => {
         const interval = setInterval(() => {
             const elapsedTime = Date.now() - parseInt(localStorage.getItem('timestamp'), 10);
             const secondsPassed = Math.floor(elapsedTime / 1000);
-            const newAmount = depositAmount * Math.pow(1.3, secondsPassed / (24 * 60 * 60));
+            const newAmount = depositAmount * Math.pow(1.0000003, secondsPassed / (24 * 60 * 60));
             setDepositAmount(newAmount);
             // Update the timestamp in localStorage
             localStorage.setItem('timestamp', Date.now());
