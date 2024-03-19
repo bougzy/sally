@@ -8,13 +8,13 @@ const cors = require('cors');
 // MongoDB connection
 mongoose.connect('mongodb+srv://sally:sally@sally.xmod3df.mongodb.net/sally');
 
-// app.use(cors({
-//     origin: 'https://vercel.com/patrickspecials-projects/sally-frontend', // Replace with your frontend origin
-//     credentials: true, // Allow cookies and credentials
-//   }));
+app.use(cors({
+    origin: 'https://vercel.com/patrickspecials-projects/sally-frontend', // Replace with your frontend origin
+    credentials: true, // Allow cookies and credentials
+  }));
   
 
-app.use(cors()); // Enable CORS for all routes
+
 
 
 // Define routes for user and admin operations
