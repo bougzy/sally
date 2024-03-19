@@ -10,7 +10,7 @@ const path = require('path');
 mongoose.connect('mongodb+srv://sally:sally@sally.xmod3df.mongodb.net/sally');
 
 app.use(cors({
-    origin: 'http://localhost:5173', // Replace with your frontend origin
+    origin: 'sally-frontend.vercel.app', // Replace with your frontend origin
     credentials: true, // Allow cookies and credentials
   }));
   
