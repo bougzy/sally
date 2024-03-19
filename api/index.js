@@ -8,10 +8,18 @@ const cors = require('cors');
 // MongoDB connection
 mongoose.connect('mongodb+srv://sally:sally@sally.xmod3df.mongodb.net/sally');
 
+// Allow requests from multiple routes on the frontend domain, including login and register routes
+const allowedOrigins = [
+  'https://sally-frontend.vercel.app',
+  'https://sally-frontend.vercel.app/login', // Add frontend login route
+  'https://sally-frontend.vercel.app/register', // Add frontend register route
+  'https://vercel.com/patrickspecials-projects/sally-frontend'
+];
+
 app.use(cors({
-    origin: 'https://vercel.com/patrickspecials-projects/sally-frontend', // Replace with your frontend origin
-    credentials: true, // Allow cookies and credentials
-  }));
+  origin: allowedOrigins,
+  credentials: true, // Allow cookies and credentials
+}));
   
 
 
