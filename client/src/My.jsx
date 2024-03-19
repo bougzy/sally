@@ -9,7 +9,8 @@ const My = () => {
     const [depositAmount, setDepositAmount] = useState(() => {
         // Get the deposit amount from localStorage or set it to 0 if not found
         const storedAmount = localStorage.getItem('depositAmount');
-        return storedAmount ? parseFloat(storedAmount) : 0;
+        const parsedAmount = parseFloat(storedAmount);
+        return !isNaN(parsedAmount) ? parsedAmount : 0;
     });
 
     useEffect(() => {
@@ -26,17 +27,17 @@ const My = () => {
     }, [depositAmount]);
 
     const handleDeposit = () => {
-    const inputElement = document.getElementById('depositAmount');
-    const inputValue = inputElement ? parseFloat(inputElement.value) : 0;
-    if (!isNaN(inputValue) && inputValue > 0) {
-        const newAmount = depositAmount + inputValue;
-        setDepositAmount(newAmount);
-        // Update the timestamp in localStorage
-        localStorage.setItem('timestamp', Date.now());
-        // Store the new amount in localStorage
-        localStorage.setItem('depositAmount', newAmount);
-    }
-};
+        const inputElement = document.getElementById('depositAmount');
+        const inputValue = inputElement ? parseFloat(inputElement.value) : 0;
+        if (!isNaN(inputValue) && inputValue > 0) {
+            const newAmount = depositAmount + inputValue;
+            setDepositAmount(newAmount);
+            // Update the timestamp in localStorage
+            localStorage.setItem('timestamp', Date.now());
+            // Store the new amount in localStorage
+            localStorage.setItem('depositAmount', newAmount);
+        }
+    };
 
     return (
         <Container>
@@ -49,7 +50,7 @@ const My = () => {
                             <Form.Label>Enter deposit amount:</Form.Label>
                             <Form.Control className="" type="number" placeholder="Enter amount" />
                         </Form.Group>
-                        <Button className="mt-2" variant="warning" onClick={() => handleDeposit(Number(document.getElementById('depositAmount').value))}>
+                        <Button className="mt-2" variant="warning" onClick={handleDeposit}>
                             Deposit
                         </Button>
                     </Form>
