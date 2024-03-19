@@ -142,7 +142,7 @@ const InvestmentCard = () => {
   return (
     <Card className='p-5 mt-4 border-0'>
       <Row className="p-3 p-5 mt-4">
-        <Col md={6} className="">
+        <Col md={12} className="">
           <Card className="shadow p-3 mb-5 bg-white rounded">
             <Card.Body>
               <div className="investment-plan">
