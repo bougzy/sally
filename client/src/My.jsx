@@ -36,6 +36,9 @@ const My = () => {
             localStorage.setItem('timestamp', Date.now());
             // Store the new amount in localStorage
             localStorage.setItem('depositAmount', newAmount);
+        } else {
+            // If input is not a valid number or empty, do nothing
+            console.error('Invalid deposit amount');
         }
     };
 
