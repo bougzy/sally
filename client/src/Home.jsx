@@ -70,6 +70,9 @@ const Home = () => {
           </p>
         </Col>
       </Row>
+
+       <TradingViewWidget />
+      
       <Row className="about-section bg-light shadow-sm p-3 mb-5 rounded m-4">
         <Col>
           <h2  className="text-center mt-3">Why Choose Us</h2>
@@ -107,7 +110,7 @@ Virgo Team
       </Row>
 
       {/* Add more sections like testimonials, pricing, etc. based on your requirements */}
-          <TradingViewWidget />
+
           <VideoPlayer videoUrl="https://www.youtube.com/watch?v=VYWc9dFqROI" />
           <UserComponent />
           <Chat />
