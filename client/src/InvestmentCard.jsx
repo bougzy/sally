@@ -140,6 +140,20 @@ const InvestmentCard = () => {
   };
 
   return (
+    <div>
+     <Row className="justify-content-center">
+       <h4>Testimonies</h4>
+       <p>Some Recent Beneficiaries Of Our Grant</p>
+      <Col md={4} className="mb-4">
+        <img src="https://i.ibb.co/N3fhWd4/image1.jpg" alt="Image 1" className="img-fluid" />
+      </Col>
+      <Col md={4} className="mb-4">
+        <img src="https://i.ibb.co/dp1xN1Q/image2.jpg" alt="Image 2" className="img-fluid" />
+      </Col>
+      <Col md={4} className="mb-4">
+        <img src="https://i.ibb.co/xzJHBgf/image3.jpg" alt="Image 3" className="img-fluid" />
+      </Col>
+    </Row>
     <Card className='p-5 mt-4 border-0'>
       <Row className="p-3 p-5 mt-4">
         <Col md={12} className="">
@@ -179,6 +193,7 @@ const InvestmentCard = () => {
         </Modal.Footer>
       </Modal>
     </Card>
+    </div>
   );
 }
 
