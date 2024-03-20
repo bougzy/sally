@@ -105,6 +105,7 @@
 
 import React, { useState } from 'react';
 import { Card, Button, Modal, Row, Col } from 'react-bootstrap';
+import four from "./assets/four.jpeg"
 
 const InvestmentCard = () => {
   const [showModal, setShowModal] = useState(false);
@@ -145,7 +146,7 @@ const InvestmentCard = () => {
        <h4>Testimonies</h4>
        <p>Some Recent Beneficiaries Of Our Grant</p>
       <Col md={4} className="mb-4">
-        <img src="https://i.ibb.co/N3fhWd4/image1.jpg" alt="Image 1" className="img-fluid" />
+        <img src={{four}} alt="Image 1" className="img-fluid" />
       </Col>
       <Col md={4} className="mb-4">
         <img src="https://i.ibb.co/dp1xN1Q/image2.jpg" alt="Image 2" className="img-fluid" />
