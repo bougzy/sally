@@ -9,7 +9,10 @@ const FooterComponent = () => {
           <Col xs={12} md={6}>
             <h4>About Us</h4>
             <p>
-          Welcome to Virgo, your trusted partner in the world of cryptocurrency trading and investment. Founded on the principles of innovation, transparency, and financial empowerment, we aim to redefine the way individuals and institutions engage with the rapidly evolving landscape of digital assets.
+           The CoinMarketCap Grant Program is a testament to our commitment to fostering innovation and driving positive 
+              change within the cryptocurrency and blockchain ecosystem. 
+              Through this program, we aim to support promising projects and initiatives that have the potential to make a 
+              significant impact on the industry.
           </p>
           </Col>
           <Col xs={12} md={6} className="">
@@ -23,7 +26,7 @@ const FooterComponent = () => {
         <Container>
           <Row>
             <Col xs={12}>
-              <p className="text-center">&copy; 2024 Virgo. All rights reserved.</p>
+              <p className="text-center">&copy; 2024 CoinMarketCap. All rights reserved.</p>
             </Col>
           </Row>
         </Container>
