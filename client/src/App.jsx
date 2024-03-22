@@ -13,6 +13,7 @@ import UserLoginComponent from './Login';
 import FooterComponent from './FooterComponent';
 import My from './My';
 import MyCard from './MyCard';
+import TidioChat from "./TidioChat"
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/mycard" element={<MyCard />} />
       </Routes>
       <FooterComponent />
+      <TidioChat />
     </>
   );
 };
