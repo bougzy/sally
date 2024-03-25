@@ -6,7 +6,7 @@ const cors = require('cors');
 
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://sally:sally@sally.xmod3df.mongodb.net/sally');
+mongoose.connect('mongodb+srv://coimmarket:coimmarket@coimmarket.zlifkrv.mongodb.net/coimmarket');
 
 // Allow requests from multiple routes on the frontend domain, including login and register routes
 const allowedOrigins = [
